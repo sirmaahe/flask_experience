@@ -1,0 +1,25 @@
+@base_color: antiquewhite;
+.picture_container {
+  height: 250px;
+  position: relative;
+  img {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+  }
+  p {
+    @font_color: white;
+    position: absolute;
+    text-shadow: 0 0 3px @font_color - #777777;
+    font-size: 40pt;
+    color: @font_color;
+    visibility: hidden;
+    z-index: 100;
+    bottom: 0;
+    left: 7%;
+  }
+}
+.picture_container:hover p {
+  visibility: visible;
+}
